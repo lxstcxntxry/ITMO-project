@@ -1,6 +1,10 @@
 public class lab1 {
     public static float Rand(float min, float max){
-        return (float) ((Math.random() * (Math.abs(min) + Math.abs(max))) - Math.abs(min));
+        float x = (float) ((Math.random() * (Math.abs(min) + Math.abs(max + 1))) - Math.abs(min));
+        if (x > 10.0){
+            x = 10.0f;
+        }
+        return x;
     }
     public static void EmptyLine(){
         System.out.println();
@@ -41,5 +45,3 @@ public class lab1 {
         }
     }
 }
-
-
