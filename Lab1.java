@@ -1,4 +1,4 @@
-public class lab1 {
+public class Lab1 {
     public static float Rand(float min, float max){
         float x = (float) ((Math.random() * (Math.abs(min) + Math.abs(max + 1))) - Math.abs(min));
         if (x > 10.0){
