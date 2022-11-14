@@ -1,0 +1,2 @@
+Main-class: org.itmo.lab2.Main
+Class-path: libs/Pokemon.jar
