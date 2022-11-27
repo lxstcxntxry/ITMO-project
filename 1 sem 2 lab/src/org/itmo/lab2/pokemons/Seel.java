@@ -7,20 +7,16 @@ import org.itmo.lab2.moves.physMoves.SignalBeam;
 import ru.ifmo.se.pokemon.*;
 
 public class Seel extends Pokemon {
-
-    StatusMove growl = new Growl();
-    StatusMove confide = new Confide();
-    PhysicalMove signalBeam = new SignalBeam();
-
     public Seel (String name, int lvl) {
         super(name, lvl);
 
-        double hp = 65, att = 45, def = 55, spAtt = 45, spDef = 70, speed = 45;
+        double hp = 65, att = 45, def = 55,
+                spAtt = 45, spDef = 70, speed = 45;
+
         this.setStats(hp, att, def, spAtt, spDef, speed);
         this.setType(Type.WATER);
 
-        this.addMove(growl);
-        this.addMove(confide);
-        this.addMove(signalBeam);
+        this.setMove(new Growl(), new Confide(),
+                new SignalBeam());
     }
 }

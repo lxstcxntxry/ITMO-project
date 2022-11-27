@@ -19,6 +19,7 @@ public class Main {
         b.addFoe(team2Unit1);
         b.addFoe(team2Unit2);
         b.addFoe(team2Unit3);
+
         b.go();
     }
 }
