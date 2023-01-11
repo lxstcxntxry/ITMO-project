@@ -16,6 +16,10 @@ public class Puppet implements PuppetInterface {
         printPuppet();
     }
 
+    public void looksLike(Puppet otherPuppet) {
+        System.out.println("'" + name + "' похож на '" + otherPuppet.getName() + "'");
+    }
+
     public void printPuppet() {
         System.out.println("'" + place + "' есть маникен '" + name + "'");
     }
