@@ -11,7 +11,7 @@ public class Main {
         Window win = new Window("Витрина");
 
         // маски в витрине
-        Masks upper = new Masks("Закрывает только верхнюю часть лица", true);
+        Masks upper = new Masks("Закрывает верхнюю часть лица", true);
         upper.printMaskType(win);
         Masks slits = new Masks("С прорезами для глаз", true);
         slits.printMaskType(win);
@@ -25,9 +25,9 @@ public class Main {
         makeup.inWindow(win);
         Things wig = new Things("Парик");
         wig.inWindow(win);
-        Things beard = new Things("Накладная борода");
+        Things beard = new Things("Борода");
         beard.inWindow(win);
-        Things mustache = new Things("Накладные усы");
+        Things mustache = new Things("Усы");
         mustache.inWindow(win);
 
         // кукла полицейского и предметы на ней
@@ -54,8 +54,11 @@ public class Main {
         Things mask = new Things("Маска");
         mask.onPuppet(stealer, AdjectiveEnum.BLACK);
 
-        // куклы были исполнены мастерский
+        // куклы были исполнены мастерски
         police.printPuppet(AdjectiveEnum.MASTERFUL);
         stealer.printPuppet(AdjectiveEnum.MASTERFUL);
+        Puppet dwarf = new Puppet("Коротышка");
+        police.looksLike(dwarf);
+        stealer.looksLike(dwarf);
     }
 }
