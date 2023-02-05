@@ -26,6 +26,11 @@ public class ThingClothes extends ThingAbstract {
     }
 
     @Override
+    public void printDescription() {
+        getPrinter().printString(getDescription());
+    }
+
+    @Override
     public String addAdjective(ThingAdjective adj) {
         if (adj != null) {
             switch (adj) {

@@ -27,6 +27,11 @@ public class ThingItem extends ThingAbstract {
     }
 
     @Override
+    public void printDescription() {
+        getPrinter().printString("На " + getName() + "написано: \n--" + getDescription() + "--");
+    }
+
+    @Override
     public String addAdjective(ThingAdjective adj) {
         if (adj != null) {
             switch (adj) {
@@ -41,6 +46,12 @@ public class ThingItem extends ThingAbstract {
                 }
                 case ELECTRIC -> {
                     return "{Электрический} ";
+                }
+                case LATEX -> {
+                    return "{Резиновый} ";
+                }
+                case METAL -> {
+                    return "{Стальной} ";
                 }
             }
         }

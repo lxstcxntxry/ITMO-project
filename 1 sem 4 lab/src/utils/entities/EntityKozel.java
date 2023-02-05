@@ -18,6 +18,6 @@ public class EntityKozel extends Entity
 	@Override
 	public String toString()
 	{
-		return "Козлик";
+		return "Козёл";
 	}
 }

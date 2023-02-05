@@ -7,12 +7,12 @@ import utils.PrinterInterface;
 import utils.actions.Action;
 import utils.exceptions.EmptyEntityDescriptionException;
 import utils.exceptions.ThingIsNotAnItemException;
+import utils.places.Place;
 
 import java.util.Objects;
 
 public abstract class Entity {
     private final String description;
-
     private final PrinterInterface printer;
 
     public Entity(String description) throws EmptyEntityDescriptionException
@@ -39,12 +39,25 @@ public abstract class Entity {
             getPrinter().printString(this + " похож на " + ent);
     }
 
-    public void manipulateAnItem(ThingAbstract item, String manipulationDescriptor)
+    public void located(String str){
+        getPrinter().printString(this + " находится на " + str);
+    }
+
+    public void located(Place pl){
+        getPrinter().printString(this + " перемещается в " + pl);
+    }
+
+    public void manipulate(ThingAbstract item, String manipulationDescriptor)
     {
         if (item.getType() != ThingType.ITEM)
             throw new ThingIsNotAnItemException("эта вещь не является предметом");
         else
             getPrinter().printString(String.format("%s %s %s", getDescription(), manipulationDescriptor, item));
+    }
+
+    public void manipulate(Entity entity, String manipulationDescriptor)
+    {
+        getPrinter().printString(String.format("%s %s %s", getDescription(), manipulationDescriptor, entity));
     }
 
     public abstract String stringify();

@@ -12,7 +12,7 @@ public class EntityNeznayka extends Entity
 	@Override
 	public String stringify()
 	{
-		return getDescription();
+		return "находится на " + getDescription();
 	}
 
 	@Override

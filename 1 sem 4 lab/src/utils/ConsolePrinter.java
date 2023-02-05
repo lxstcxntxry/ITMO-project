@@ -21,6 +21,6 @@ public class ConsolePrinter implements PrinterInterface {
             }
         }
 
-        System.out.println(new PrinterAddition("консольный принтер") + str);
+        System.out.println(new PrinterAddition("Вывод") + str);
     }
 }

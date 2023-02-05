@@ -17,7 +17,6 @@ public abstract class ThingAbstract {
     private PrinterInterface printer;
     private final ThingType type;
     private ThingAdjective adj;
-
     private ThingDescription thingDescription;
 
     private class ThingDescription
@@ -39,7 +38,7 @@ public abstract class ThingAbstract {
     {
         this.name = name;
         this.type = type;
-        entity = new EntityWindow("[дефолтное окно]");
+        entity = new EntityWindow("Неизвестно");
         printer = new ConsolePrinter();
     }
 
@@ -60,6 +59,7 @@ public abstract class ThingAbstract {
     }
 
     public abstract void printItem();
+    public abstract void printDescription();
     public abstract String addAdjective(ThingAdjective adj);
     public abstract String addType(ThingType type);
 

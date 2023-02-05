@@ -33,6 +33,11 @@ public class ThingDoor extends ThingAbstract
 	}
 
 	@Override
+	public void printDescription() {
+		getPrinter().printString(getDescription());
+	}
+
+	@Override
 	public String addAdjective(ThingAdjective adj)
 	{
 		return adj.toString();
