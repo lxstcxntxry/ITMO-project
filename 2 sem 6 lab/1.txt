@@ -1,2 +1,2 @@
 show
-exit
+execute_script 2.txt
